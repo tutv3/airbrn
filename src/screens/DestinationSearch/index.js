@@ -4,7 +4,7 @@ import SearchResultList from '../../components/SearchResultList';
 import styles from './styles';
 import searchResults from '../../../assets/data/search';
 
-const DestinationSearch = () => {
+const DestinationSearch = ({navigation}) => {
   const [input, setInput] = useState('');
   return (
     <View style={styles.container}>
@@ -14,7 +14,7 @@ const DestinationSearch = () => {
         value={input}
         onChangeText={text => setInput(text)}
       />
-      <SearchResultList data={searchResults} />
+      <SearchResultList data={searchResults} navigate={navigation.navigate} />
     </View>
   );
 };
