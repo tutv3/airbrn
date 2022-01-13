@@ -32,14 +32,14 @@ const Router = () => {
           name="SearchResult"
           component={SearchResultScreen}
           options={{
-            title: 'Search result',
+            title: 'Search our destinations',
           }}
         />
         <Stack.Screen
           name="DestinationSearch"
           component={DestinationSearchScreen}
           options={{
-            title: 'Search our destinations',
+            title: 'Our destinations',
           }}
         />
       </Stack.Navigator>

@@ -5,7 +5,9 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   textInput: {
-    fontSize: 20,
+    fontSize: 18,
+    backgroundColor: '#fff',
+    paddingLeft: 10,
   },
 });
 
