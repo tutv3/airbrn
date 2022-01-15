@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     backgroundColor: '#fff',
     paddingLeft: 10,
+    borderRadius: 5,
   },
   error: {
     color: 'red',
