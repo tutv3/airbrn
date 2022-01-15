@@ -13,11 +13,11 @@ const SearchResultList = ({data, navigate}) => {
             <View style={styles.iconContainer}>
               <Entypo name="location-pin" size={36} color="#222" />
             </View>
-            <Text style={styles.desc}>{item.description}</Text>
+            <Text style={styles.desc}>{item.properties.address_line1}</Text>
           </View>
         </Pressable>
       )}
-      keyExtractor={item => item.id}
+      keyExtractor={item => item.properties.place_id}
     />
   );
 };

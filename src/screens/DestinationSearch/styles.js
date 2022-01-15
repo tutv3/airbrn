@@ -9,6 +9,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingLeft: 10,
   },
+  error: {
+    color: 'red',
+    fontSize: 12,
+    marginTop: 10,
+    textAlign: 'center',
+    fontWeight: 'bold',
+  },
 });
 
 export default styles;
