@@ -4,11 +4,20 @@ import {View} from 'react-native';
 
 const Placerholder = () => {
   return (
-    <View
-      style={{
-        marginTop: 20,
-      }}>
-      <Bullets active listSize={5} aSize={50} />
+    <View>
+      <Bullets
+        active
+        listSize={5}
+        aSize={50}
+        tHeight={20}
+        tWidth="100%"
+        aShape="square"
+        containerStyles={{
+          paddingVertical: 16,
+          borderBottomWidth: 1,
+          borderColor: 'lightgray',
+        }}
+      />
     </View>
   );
 };

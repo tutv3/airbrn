@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {View, TextIput, TextInput, Text} from 'react-native';
+import {View, TextIput, TextInput, Text, Pressable} from 'react-native';
 import SearchResultList from '../../components/SearchResultList';
 import styles from './styles';
 import axios from 'axios';
 import {REACT_NATIVE_APP_GEOAPIFY_KEY} from '@env';
 import {debounce} from '../../utils/timer';
 import Placerholder from './placerholder';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const DestinationSearch = ({navigation}) => {
   const [input, setInput] = useState('');
@@ -42,18 +43,27 @@ const DestinationSearch = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.textInput}
-        placeholder="Where are you going ?"
-        value={input}
-        onChangeText={text => {
-          setInput(text);
-          if (text) {
-            processOnSearch(text);
-          }
-        }}
-      />
-
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.textInput}
+          placeholder="Where are you going ?"
+          value={input}
+          onChangeText={text => {
+            setInput(text);
+            if (text) {
+              processOnSearch(text);
+            }
+          }}
+        />
+        <Pressable
+          onPress={() => {
+            setInput('');
+            setList([]);
+          }}
+          style={styles.clearButton}>
+          <FontAwesome name="times" size={16} color="#fff" />
+        </Pressable>
+      </View>
       {isLoading ? (
         <Placerholder />
       ) : (
