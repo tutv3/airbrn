@@ -9,7 +9,7 @@ import Placerholder from './placerholder';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const DestinationSearch = ({navigation}) => {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState('HCM');
   const [list, setList] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -38,8 +38,6 @@ const DestinationSearch = ({navigation}) => {
   const processOnSearch = inputData => {
     debounce(() => onSearchLocations(inputData), 1000)();
   };
-
-  console.log(list);
 
   return (
     <View style={styles.container}>

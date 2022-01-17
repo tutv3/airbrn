@@ -13,7 +13,7 @@ const Placerholder = () => {
         tWidth="100%"
         aShape="square"
         containerStyles={{
-          paddingVertical: 16,
+          paddingVertical: 11,
           borderBottomWidth: 1,
           borderColor: 'lightgray',
         }}
