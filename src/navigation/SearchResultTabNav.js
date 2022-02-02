@@ -7,7 +7,6 @@ import PlaceMap from '../components/PlaceMap';
 const Tab = createMaterialTopTabNavigator();
 
 const SearchResultTabNav = () => {
-  console.log(process.env.REACT_NATIVE_APP_MAP_BOX_ACCESS_TOKEN);
   return (
     <Tab.Navigator
       screenOptions={{

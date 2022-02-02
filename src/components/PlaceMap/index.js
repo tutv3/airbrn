@@ -1,30 +1,22 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import MapboxGL from '@react-native-mapbox-gl/maps';
+import {View, Text, Image} from 'react-native';
+import styles from './styles';
+// import MapboxGL from '@react-native-mapbox-gl/maps';
 
-MapboxGL.setAccessToken(process.env.REACT_NATIVE_APP_MAP_BOX_ACCESS_TOKEN);
-
-const styles = StyleSheet.create({
-  page: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  container: {
-    height: 300,
-    width: 300,
-    backgroundColor: 'tomato',
-  },
-  map: {
-    flex: 1,
-  },
-});
+// MapboxGL.setAccessToken(
+//   'pk.eyJ1IjoidHV2YW50cmFuMTk5OCIsImEiOiJja3lrMjA2bHowOXBtMndwbmRpb3J5d3M4In0.FfDWj-1giV_qf3fli3jrqw',
+// );
 
 const PlaceMap = () => {
   return (
     <View>
-      <MapboxGL.MapView style={styles.map} />
+      {/* <MapboxGL.MapView style={styles.map} /> */}
+      <Image
+        style={styles.image}
+        source={{
+          uri: 'https://img.gadgethacks.com/img/60/25/63633755880541/0/7-best-new-features-for-maps-ios-11-for-iphone.w1456.jpg',
+        }}
+      />
     </View>
   );
 };

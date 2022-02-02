@@ -15,8 +15,6 @@ import Router from './src/navigation/Router';
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
-  console.log(process.env.REACT_NATIVE_APP_MAP_BOX_ACCESS_TOKEN);
-
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
